@@ -1866,7 +1866,7 @@ export class Database {
     try {
       await this.get();
       return true;
-    } catch (err) {
+    } catch (err: any) {
       if (isArangoError(err) && err.errorNum === DATABASE_NOT_FOUND) {
         return false;
       }
